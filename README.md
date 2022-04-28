@@ -147,8 +147,8 @@ $ uvicorn appconfig.core:application --host 0.0.0.0 --port 8080
     </a>
 </p>
 <p>&nbsp;&nbsp;
-    <a href="mailto:contact@rodneysostras.me" alt="Email do Rodney Sostras">
-        <img src="https://img.shields.io/badge/-contact@rodneysostras.me-D14836?style=for-the-badge&logo=Gmail&logoColor=FFF" />
+    <a href="mailto:rodney.sostras@gmail.com" alt="Email do Rodney Sostras">
+        <img src="https://img.shields.io/badge/-rodney.sostras@gmail.com-D14836?style=for-the-badge&logo=Gmail&logoColor=FFF" />
     </a>
 </p>
 <p>&nbsp;&nbsp;
@@ -160,6 +160,8 @@ $ uvicorn appconfig.core:application --host 0.0.0.0 --port 8080
 <br />
 
 <!-- ## 🎨 Creditos -->
+
+<br />
 
 ## 📝 Licença
 
