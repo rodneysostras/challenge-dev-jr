@@ -1,0 +1,8 @@
+{
+    "name": "Challenge Milenio",
+    "service": "backend",
+    "workspaceFolder": "/dev/backend",
+    "dockerComposeFile": "../docker/docker-compose.yml",
+    "shutdownAction": "stopCompose",
+    "forwardPorts": [8080],
+}

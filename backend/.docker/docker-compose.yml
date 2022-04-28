@@ -1,0 +1,29 @@
+version: "3.7"
+services:
+  backend:
+    build: .
+    container_name: milenio-backend
+    ports:
+      - "8080:8080"
+    stdin_open: true
+    working_dir: /dev/app/backend/
+    volumes:
+      - ../:/dev/app/backend/
+    depends_on:
+      - mileniodb
+
+  mileniodb:
+    image: postgres:13.6-alpine
+    restart: always
+    environment:
+      PGDATA: "/data/postgres"
+      POSTGRES_USER: ${POSTGRES_USER:-milenio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}
+      POSTGRES_DB: ${POSTGRES_PASSWORD:-mileniodb}
+    ports:
+      - "5432:5432"
+    volumes:
+      - "dbdata:/data/postgres"
+
+volumes:
+  dbdata:
