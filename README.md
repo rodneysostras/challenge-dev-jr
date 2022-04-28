@@ -1,5 +1,6 @@
 <h1>
-    <img src=".gitlab/assets/img/icon-readme-title.png" alt="" height="60em" align="left"/>Challenge Milenio Capital
+    <img src=".gitlab/assets/img/icon-readme-title.png" alt="" height="60em" align="left"/>
+    Challenge Milenio Capital
 </h1>
 <div align="center">
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
@@ -8,16 +9,16 @@
 
 <br />
 
-<p align="center">
-    <a href="#-sobre-o-projeto">Sobre</a> •
-    <a href="#-requisitos">Requisitos</a> •
-    <a href="#-recursos">Recursos</a> •
-    <a href="#-como-executar-o-projeto">Como executar</a> •
-    <a href="#-tecnologias">Tecnologias</a> •
-    <a href="#-autor">Autor</a> •
-</p>
-
-<br />
+<div align="center">
+    <p>
+        <a href="#-sobre-o-projeto">Sobre</a> •
+        <a href="#-requisitos">Requisitos</a> •
+        <a href="#-recursos">Recursos</a> •
+        <a href="#-como-executar-o-projeto">Como executar</a> •
+        <a href="#-tecnologias">Tecnologias</a> •
+        <a href="#-autor">Autor</a>
+    </p>
+</div>
 
 ## 💻 Sobre o projeto
 
@@ -35,13 +36,15 @@
 
 🏆 Challenge Milenio Capital - Uma aplicação Web desenvolvida em python utilizando framework FastAPI.
 
-Applicação tem objetivo de simplificar as melhores rotas entre algumas cidades para melhorar a logística de trabalho
+Applicação tem objetivo de simplificar informando as melhores rotas entre algumas cidades para melhorar a logística de trabalho.
 
 Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 > Uma challenge realizada para testar meus conhecimentos tendo que comprir os requisitos abaixo.
 
 > Branch da entrega '[challenge](https://gitlab.com/rodneysostras/desafio-dev-jr-pl/tree/challenge)'
+
+<br />
 
 ## 🎯 Requisitos
 
@@ -107,11 +110,15 @@ $ uvicorn appconfig.core:application --host 0.0.0.0 --port 8080
 > \
 > Estes procedimentos estão descritos acima.
 
+<br />
+
 ## 🛠 Tecnologias
 
 -   **[Python](https://www.python.org/)** • Uma linguagem de programação de alto nível, é conhecida por usa simplicidade e legibilidade
 -   **[FastAPI](https://fastapi.tiangolo.com/)** • Framework web para construções de APIs com Python 3.6 ou superior.
 -   **[Postgresql](https://www.postgresql.org/)** • Sistema de banco de dados objeto-relacional de código aberto com mais de 30 anos de desenvolvimento
+
+<br />
 
 ## 🦸 Autor
 
