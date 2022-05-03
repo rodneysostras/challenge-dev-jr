@@ -9,4 +9,4 @@ from appconfig.router import app_router
 
 application = FastAPI()
 
-application.include_router(app_router, prefix="/api")
+application.include_router(app_router)
