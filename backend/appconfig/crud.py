@@ -48,3 +48,31 @@ class CRUDBase(Generic[ModelType, CreateSchemaType, UpdateSchemaType]):
         self.session.commit()
 
         return db_obj
+
+    def update(self, id: Any, obj_in: UpdateSchemaType) -> ModelType:
+        """ Atualiza um registro especifico """
+        db_obj = self.retrieve(id)
+
+        if not db_obj: return None
+
+        update_data = obj_in.dict(exclude_unset=True)
+
+        for key, value in update_data.items():
+            setattr(db_obj, key, value)
+        
+        self.session.add(db_obj)
+        self.session.commit()
+        self.session.refresh(db_obj)
+            
+        return db_obj
+
+    def destroy(self, id: Any) -> ModelType:
+        """ Apaga um registro especifico"""
+        db_obj = self.retrieve(id)
+
+        if not db_obj: return None
+        
+        self.session.delete(db_obj)
+        self.session.commit()
+        
+        return db_obj
