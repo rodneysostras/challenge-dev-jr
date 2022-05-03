@@ -50,13 +50,13 @@ Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 > Os requisitos abaixo são resumidos, para melhores informações veja [documento oficial](docs/challenge.md)
 
-- [ ] API
-  - [ ] Criar | Esse endpoint deverá receber os dados e salvar no banco de dados.
-  - [ ] Recuperar | Esse endpoint deverá retornar um grafo previamente salvo no bando de dados.
-  - [ ] Calculo de distância | Esse endpoint deverá calcular todas as rotas disponíveis de uma cidade origem para outra de destino.
-  - [ ] Distância mínima | Esse endpoint deverá determinar a rota cuja distância seja a mínima possível entre duas cidades.
-- [ ] Dockerfile
-- [ ] Docker-compose com todos os serviços
+- [X] API
+  - [X] Criar | Esse endpoint deverá receber os dados e salvar no banco de dados.
+  - [X] Recuperar | Esse endpoint deverá retornar um grafo previamente salvo no bando de dados.
+  - [X] Calculo de distância | Esse endpoint deverá calcular todas as rotas disponíveis de uma cidade origem para outra de destino.
+  - [X] Distância mínima | Esse endpoint deverá determinar a rota cuja distância seja a mínima possível entre duas cidades.
+- [X] Dockerfile
+- [X] Docker-compose com todos os serviços
 - [ ] Testes de integração
 - [ ] Documentação
 
@@ -64,8 +64,9 @@ Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 ## 📦 Recursos
 
-- [ ] Utilitario de linha de comando
-- [ ] Alembic - Ferramenta para gerenciar a estrutura do banco de dados
+- [X] Utilitario de linha de comando
+- [X] Alembic - Ferramenta para gerenciar a estrutura do banco de dados
+- [X] Collection Insomnia - Configuração para usar no software Isomnia
 
 <br />
 
