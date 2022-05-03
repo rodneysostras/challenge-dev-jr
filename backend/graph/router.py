@@ -92,11 +92,14 @@ async def all_paths(
             source, target, distance = edge.values()
             g.add_edge(source, target, distance)
 
-        paths = g.all_paths(town1, town2, maxStops)
+        if paths := g.all_paths(town1, town2, maxStops):
+            response = { 'routes': [ {'route': "".join(path), 'stops': len(path) - 1 } for path in paths ] }
 
-        response = { 'routes': [ {'route': "".join(path), 'stops': len(path) - 1 } for path in paths ] }
+            return JSONResponse(content=jsonable_encoder(response))
 
-        return JSONResponse(content=jsonable_encoder(response))
+        raise E404Exception(
+            detail=f"Route 'town1={town1}' for 'town2={town2}' not found in Graph 'ID={graphId}'"
+        )
 
         
     raise E404Exception(detail=f"Graph 'ID={graphId}' not found.")
@@ -116,9 +119,12 @@ async def shortest_path(
             source, target, distance = edge.values()
             g.add_edge(source, target, distance)
 
-        response = g.shortest_path(town1, town2)
+        if response := g.shortest_path(town1, town2):
+            return JSONResponse(content=jsonable_encoder(response))
 
-        return JSONResponse(content=jsonable_encoder(response))
+        raise E404Exception(
+            detail=f"Distance 'town1={town1}' for 'town2={town2}' not found in Graph 'ID={graphId}'"
+        )
 
         
     raise E404Exception(detail=f"Graph 'ID={graphId}' not found.")

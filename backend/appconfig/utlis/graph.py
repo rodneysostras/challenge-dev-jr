@@ -1,15 +1,15 @@
 # Copyright 2022 the author Rodney Sostras. All rights reserved.
 
-from collections import deque
+from collections import deque, defaultdict
 
 class Graph():
     def __init__(self) -> None:
-        self.edges = {}
+        self.edges = defaultdict(lambda: {})
 
     def add_edge(self, source: str, target: str, weight: int):
         """ Adiciona as bordas """
         if target not in self.edges:
-            self.edges[target] = {}
+            self.edges[target] = defaultdict(lambda: {})
         
         # Cria uma matriz conténdo o peso para chegar na determinada bordas
         self.edges[target][source] = int(weight)
@@ -23,8 +23,11 @@ class Graph():
         queue = deque()
         # Uma lista de nós visitados/verificados
         visited = set()
-        # Vetor dos caminhos com o valor inicial a origem
-        vector = { source: 0 }
+        # Vetor dos caminhos
+        vector = defaultdict(lambda: {})
+
+        # Adiciona valor inicial que e a origem
+        vector[source] = 0
 
         # Aciona a origem para ser verificada
         queue.append( ( source, 0 ) )
@@ -88,6 +91,10 @@ class Graph():
                     min_weight = next_node_weight
                     best_direction = next_node
         
+        # Caso o caminho não exista
+        if not vector[target]:
+            return None
+
         # Peso do melhor trajeto até o alvo 
         distance = vector[target][ route[-2] ]
         
