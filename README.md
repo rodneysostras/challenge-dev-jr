@@ -66,6 +66,7 @@ Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 - [X] Utilitario de linha de comando
 - [X] Alembic - Ferramenta para gerenciar a estrutura do banco de dados
+- [X] Collection Insomnia - Configuração para usar no software Isomnia
 
 <br />
 
