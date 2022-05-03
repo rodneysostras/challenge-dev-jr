@@ -8,6 +8,10 @@ class Graph():
 
     def add_edge(self, source: str, target: str, weight: int):
         """ Adiciona as bordas """
+        # reset case sensitive
+        source = source.lower()
+        target = target.lower()
+
         if target not in self.edges:
             self.edges[target] = defaultdict(lambda: {})
         
@@ -19,6 +23,8 @@ class Graph():
         Utilizando o algoritmo Dijkstra para monta um vetor
         com o custo da trajetória de cada nó em uma vértice
         """
+        #reset case sensitive
+        source = source.lower()
         # Uma lista para verificar as adjacência do nó
         queue = deque()
         # Uma lista de nós visitados/verificados
@@ -66,6 +72,9 @@ class Graph():
         dois nós de uma única direção em um grafo
 
         """
+        #reset case sensitive
+        source = source.lower()
+        target = target.lower()
         # Segmentos com os custos com direção a origem
         vector = self.dijkstra(source)
         # melhor direção inicial e o alvo
@@ -106,6 +115,9 @@ class Graph():
         para encontrar todas as trajetórias possíveis entre
         dois nós em um grafo, possuíndo a extenção de limite de paradas.
         """
+        #reset case sensitive
+        source = source.lower()
+        target = target.lower()
         # Fila para verificar as direções
         queue = deque()
         # Lista contendo a trajetória
