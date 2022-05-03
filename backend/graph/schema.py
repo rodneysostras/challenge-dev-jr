@@ -1,10 +1,9 @@
 # Copyright 2022 the author Rodney Sostras. All rights reserved.
 
 from typing import List
-from pydantic import BaseModel, Json
+from pydantic import BaseModel
 
 class DataGraph(BaseModel):
-    """ abc """
     source: str
     target: str
     distance: str
