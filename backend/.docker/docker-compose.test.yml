@@ -1,0 +1,28 @@
+version: "3.7"
+services:
+  backend-test:
+    container_name: milenio-backend-test
+    extends:
+      file: ./docker-compose.yml
+      service: backend
+    environment:
+      DEBUG: "true"
+      DATABASE_URL_TEST: "postgresql://milenio-test:1234@mileniodb-test:5432/mileniodb-test"
+    depends_on:
+      - mileniodb-test
+
+  mileniodb-test:
+    container_name: mileniodb-test
+    extends:
+      file: docker-compose.yml
+      service: mileniodb
+    environment:
+      PGDATA: "/data/postgres"
+      POSTGRES_USER: "milenio-test"
+      POSTGRES_PASSWORD: "1234"
+      POSTGRES_DB: "mileniodb-test"
+    volumes:
+      - "dbdata:/data/postgres-test"
+
+volumes:
+  dbdata:

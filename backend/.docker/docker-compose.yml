@@ -19,7 +19,7 @@ services:
       PGDATA: "/data/postgres"
       POSTGRES_USER: ${POSTGRES_USER:-milenio}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-1234}
-      POSTGRES_DB: ${POSTGRES_PASSWORD:-mileniodb}
+      POSTGRES_DB: ${POSTGRES_DB:-mileniodb}
     ports:
       - "5432:5432"
     volumes:

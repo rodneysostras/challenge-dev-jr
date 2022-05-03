@@ -38,3 +38,11 @@ def migrate():
     os.system('alembic upgrade head')
 
 execute_command_line.add_command(migrate)
+
+# Testing
+@click.command('test')
+def migrate():
+    """ Executa  os testes automatico"""
+    os.system('pytest')
+
+execute_command_line.add_command(migrate)
