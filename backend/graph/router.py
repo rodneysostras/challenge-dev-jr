@@ -75,3 +75,51 @@ async def destroy(
         return result
 
     raise E404Exception(detail=f"Graph 'ID={graphId}' not found.")
+
+@graph_router.get('/routes/{graphId}/from/{town1}/{town2}')
+async def all_paths(
+    db: Session = Depends(get_session),
+    graphId: int = None,
+    town1: str = None,
+    town2: str = None,
+    maxStops: int = 1e7
+):
+    """ Procura os possíveis caminhos entre dos pontos """
+    if vertex := CRUDGraph(db).retrieve(graphId):
+        g = Graph()
+        
+        for edge in vertex.data:
+            source, target, distance = edge.values()
+            g.add_edge(source, target, distance)
+
+        paths = g.all_paths(town1, town2, maxStops)
+
+        response = { 'routes': [ {'route': "".join(path), 'stops': len(path) - 1 } for path in paths ] }
+
+        return JSONResponse(content=jsonable_encoder(response))
+
+        
+    raise E404Exception(detail=f"Graph 'ID={graphId}' not found.")
+
+@graph_router.get('/distance/{graphId}/from/{town1}/to/{town2}')
+async def shortest_path(
+    db: Session = Depends(get_session),
+    graphId: int = None,
+    town1: str = None,
+    town2: str = None,
+):
+    """ Procura os possíveis caminhos entre dos pontos """
+    if vertex := CRUDGraph(db).retrieve(graphId):
+        g = Graph()
+
+        for edge in vertex.data:
+            source, target, distance = edge.values()
+            g.add_edge(source, target, distance)
+
+        response = g.shortest_path(town1, town2)
+
+        return JSONResponse(content=jsonable_encoder(response))
+
+        
+    raise E404Exception(detail=f"Graph 'ID={graphId}' not found.")
+    
