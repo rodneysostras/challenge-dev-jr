@@ -173,3 +173,5 @@ Feito com ❤️ por Rodney Sostras 👋🏽 [Entre em contato!](https://www.lin
 <br />
 
 <div align="right"><a href="#">Voltar ao topo ⬆</a></div>
+
+<!-- ENTREGA FINAL -->
