@@ -47,7 +47,7 @@ Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 > Uma challenge realizada para testar meus conhecimentos tendo que comprir os requisitos abaixo.
 
-> Branch da entrega '[challenge](https://gitlab.com/rodneysostras/desafio-dev-jr-pl/tree/challenge)'
+> Branch da entrega '[challenge](https://github.com/rodneysostras/challenge-milenio/tree/challenge)'
 
 <br />
 
