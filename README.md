@@ -5,7 +5,7 @@
 
 <h1>
     <img src=".gitlab/assets/img/icon-readme-title.png" alt="" height="60em" align="left"/>
-    Challenge Milenio Capital
+    Challenge Dev JR
 </h1>
 <div align="center">
     <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
@@ -39,7 +39,7 @@
 
 <br />
 
-🏆 Challenge Milenio Capital - Uma aplicação Web desenvolvida em python utilizando framework FastAPI.
+🏆 Challenge Dev JR - Uma aplicação Web desenvolvida em python utilizando framework FastAPI.
 
 Applicação tem objetivo de simplificar informando as melhores rotas entre algumas cidades para melhorar a logística de trabalho.
 
@@ -47,7 +47,7 @@ Sua base de dados persistente e o PostgreSQL um banco de dados relacional.
 
 > Uma challenge realizada para testar meus conhecimentos tendo que comprir os requisitos abaixo.
 
-> Branch da entrega '[challenge](https://github.com/rodneysostras/challenge-milenio/tree/challenge)'
+> Branch da entrega '[challenge](https://github.com/rodneysostras/challenge-dev-jr/tree/challenge)'
 
 <br />
 
